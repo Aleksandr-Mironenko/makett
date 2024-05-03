@@ -1,0 +1,186 @@
+@import './_variable.scss';
+
+.swiper {
+  margin: 16px 0 16px 16px;
+  @media (min-width: $screen-tablet) {
+    margin: 24px 0;
+  }
+  @media (min-width: $screen-monitor) {
+    margin: 32px 0;
+  }
+  &--price {
+    margin: 16px 0 16px 8px;
+
+    @media (min-width: $screen-tablet) {
+      margin: 0 24px 24px 24px;
+    }
+    @media (min-width: $screen-monitor) {
+      margin: 0 32px 32px 32px;
+    }
+  }
+}
+.swiper-wrapper {
+  &--brends {
+    min-height: 110px;
+    padding: 0 auto;
+
+    @media (min-width: $screen-tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, 240px);
+      justify-content: space-evenly;
+      row-gap: 16px;
+      min-height: 0;
+    }
+
+    @media (min-width: $screen-monitor) {
+      grid-template-columns: repeat(4, 240px);
+      max-width: 1121px;
+    }
+  }
+  &--kinds {
+    min-height: 200px;
+    padding: 0 auto;
+
+    @media (min-width: $screen-tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, 240px);
+      justify-content: space-evenly;
+      row-gap: 16px;
+      min-height: 0;
+    }
+
+    @media (min-width: $screen-monitor) {
+      grid-template-columns: repeat(4, 240px);
+      max-width: 1121px;
+    }
+  }
+  &--price {
+    min-height: 240px;
+
+    @media (min-width: $screen-tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-left: 0;
+      min-height: 160px;
+    }
+  }
+}
+.swiper-slide {
+  &--brends {
+    position: relative;
+    width: 240px;
+    height: 70px;
+    border: 2px solid $color-lite-gray;
+    border-radius: 6px;
+    background-color: $color-white;
+
+    @media (min-width: $screen-tablet) {
+      width: 224px;
+      margin: auto;
+    }
+
+    @media (min-width: $screen-monitor) {
+      width: 240px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 16px;
+      bottom: 50%;
+      transform: translateY(50%);
+      width: 40px;
+      height: 40px;
+      border: 2px solid $color-radius-bottom;
+      border-radius: 50%;
+      background-image: url('../img/arrow-icon/Line.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+  &--kinds {
+    position: relative;
+    width: 240px;
+    height: 160px;
+    border: 2px solid $color-lite-gray;
+    border-radius: 6px;
+    background-color: $color-white;
+    padding: 16px 0 0 16px;
+
+    @media (min-width: $screen-tablet) {
+      width: 224px;
+      margin: auto;
+    }
+
+    @media (min-width: $screen-monitor) {
+      width: 240px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      width: 40px;
+      height: 40px;
+      border: 2px solid $color-radius-bottom;
+      border-radius: 50%;
+      background-image: url('../img/arrow-icon/Line.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+  &--price {
+    font-size: 14px;
+    position: relative;
+    padding: 16px;
+    width: 260px;
+    height: 200px;
+    border-radius: 6px;
+    background-color: $color-white;
+
+    @media (min-width: $screen-tablet) {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px;
+      align-items: center;
+      border-radius: 0;
+      width: 100%;
+      height: fit-content;
+    }
+    &:nth-child(3) {
+      @media (min-width: $screen-tablet) {
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+      }
+    }
+    &:last-child {
+      @media (min-width: $screen-tablet) {
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+    }
+  }
+}
+
+.swiper-image {
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 20px;
+  width: auto;
+  height: auto;
+}
+
+.swiper-pagination {
+  text-align: center;
+
+  @media (min-width: $screen-tablet) {
+    display: none;
+  }
+}
+.swiper-pagination-bullet-active {
+  background-color: $color-swiper-pagination1;
+}
+.swiper-pagination-bullet {
+  background-color: $color-swiper-pagination2;
+}

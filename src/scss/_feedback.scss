@@ -1,0 +1,58 @@
+@import './_variable.scss';
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  font-family: $family-middle;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  background-color: $color-white;
+  box-shadow: -16px 0px 52px 0px $color-shadow;
+  z-index: 2;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+
+    @media (min-width: $screen-tablet) {
+      position: absolute;
+      margin: 0;
+      left: -72px;
+      top: 32px;
+    }
+  }
+  &__header-button {
+    display: inline-block;
+  }
+  &__form-tittle {
+    position: relative;
+    margin-top: 32px;
+  }
+  &__form-text {
+    font-size: 28px;
+    line-height: 32px;
+    margin-left: 16px;
+    letter-spacing: -0.6px;
+    font-family: $family-bold;
+    vertical-align: middle;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 4px;
+      height: 100%;
+      border: 1px solid $color-pseudo-element;
+      border-radius: 0 4px 4px 0;
+      background-color: $color-pseudo-element;
+    }
+  }
+}

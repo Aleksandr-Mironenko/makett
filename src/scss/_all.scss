@@ -1,0 +1,175 @@
+@import './_variable.scss';
+body {
+  background-color: $color-body-container;
+  @media (min-width: $screen-full) {
+    background-image: linear-gradient(
+      to right,
+      $color-white,
+      $color-body-container
+    );
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+[type='button'] {
+  border: none;
+  background-color: transparent;
+}
+
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: $color-black;
+}
+
+.price a:link,
+.price a:visited,
+.price a:hover,
+.kinds a:link,
+.kinds a:visited,
+.kinds a:hover {
+  font-family: $family-middle;
+}
+
+.footer a:link,
+.footer a:visited,
+.footer a:hover {
+  color: $color-hard-gray;
+}
+
+.body-container {
+  max-width: $screen-full;
+  position: relative;
+  margin: 0 auto;
+  background-color: $color-body-container;
+  z-index: 1;
+  opacity: 1;
+  transition-duration: 1s;
+  transition-property: opacity;
+
+  @media (min-width: $screen-full) {
+    background-image: linear-gradient(
+      to right,
+      $color-white 0 22.22%,
+      $color-body-container 22.22% 100%
+    );
+  }
+}
+
+.indent-left-style {
+  margin-left: 16px;
+}
+.indent-left-style:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+.indent-right-style {
+  margin-right: 16px;
+}
+.indent-right-style:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
+}
+
+.hidden-click-768-brends {
+  display: none;
+
+  @media (min-width: $screen-monitor) {
+    display: block;
+  }
+}
+.hidden-click-1120-brends {
+  display: none;
+}
+
+.hidden-click-768-kinds {
+  @media (min-width: $screen-tablet) {
+    display: none;
+  }
+
+  @media (min-width: $screen-monitor) {
+    display: block;
+  }
+}
+.hidden-click-1120-kinds {
+  @media (min-width: $screen-tablet) {
+    display: none;
+  }
+}
+
+.hidden320 {
+  display: flex;
+  @media (min-width: $screen-tablet) {
+    display: none;
+  }
+}
+
+.hidden768 {
+  display: none;
+  @media (min-width: $screen-tablet) {
+    display: flex;
+  }
+  @media (min-width: $screen-monitor) {
+    display: none;
+  }
+}
+
+.hidden1120 {
+  display: none;
+  @media (min-width: $screen-monitor) {
+    display: flex;
+  }
+}
+
+.hidden1440 {
+  @media (min-width: $screen-full) {
+    display: none;
+  }
+}
+.opacity {
+  opacity: 0.06;
+  transition-duration: 1s;
+}
+
+.opacity-left {
+  opacity: 0.06;
+  transition-duration: 1s;
+}
+
+.callback-hidden {
+  display: none;
+}
+
+.feedback-hidden {
+  display: none;
+}
+
+.knopka-zakaz {
+  width: 119px;
+  height: 32px;
+  border-radius: 16px;
+  border: transparent;
+  background-color: $color-radius-bottom;
+  color: $color-white;
+}
+
+.form__push {
+  width: 136px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: $color-radius-bottom;
+  color: $color-white;
+  text-transform: uppercase;
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

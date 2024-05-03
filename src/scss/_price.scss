@@ -1,0 +1,128 @@
+@import './_variable.scss';
+
+.price {
+  opacity: 1;
+  max-width: 1121px;
+  background-color: $color-body-container;
+  font-family: $family-normal;
+  line-height: 24px;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  margin: 0 auto;
+
+  @media (min-width: $screen-monitor) {
+    max-width: 1121px;
+    margin: 0 auto;
+  }
+  @media (min-width: $screen-full) {
+    margin: 0 0 0 auto;
+  }
+  &__title {
+    border-top: 1px solid $color-lite-blue;
+    padding: 16px;
+    min-width: 100%;
+    background-image: linear-gradient(
+      to right,
+      $color-body-container,
+      $color-white
+    );
+    text-transform: uppercase;
+    color: $color-hard-gray;
+
+    @media (min-width: $screen-tablet) {
+      padding-left: 24px;
+    }
+
+    @media (min-width: $screen-monitor) {
+      padding-left: 32px;
+    }
+  }
+  &__info-item-title {
+    width: 378px;
+  }
+  &__item-header-title {
+    color: $color-hard-gray;
+  }
+  &__info-item-last {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media (max-width: 767px) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    @media (min-width: $screen-tablet) {
+      width: 250px;
+      align-items: center;
+    }
+  }
+  &__item-title {
+    color: $color-hard-gray;
+
+    @media (min-width: $screen-tablet) {
+      display: none;
+    }
+  }
+  &__item-descr {
+    letter-spacing: 0.2px;
+  }
+  &__iorder-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media (max-width: $screen-tablet) {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+    }
+  }
+  &__content {
+    margin: 16px 8px;
+    max-width: 432px;
+
+    @media (min-width: $screen-tablet) {
+      margin: 0 0 50px 24px;
+    }
+
+    @media (min-width: $screen-monitor) {
+      margin: 0 0 50px 36px;
+    }
+  }
+}
+
+.price-header {
+  display: none;
+  border: none;
+  background-color: $color-body-container;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+  }
+}
+
+.separator::before {
+  position: absolute;
+  bottom: 0;
+  transform: translatex(-50%);
+  left: 50%;
+  content: '';
+  width: 95%;
+  height: 1px;
+  background-color: $color-lite-gray;
+}
+
+.strelka {
+  padding-left: 8px;
+}
+
+.first-size {
+  @media (min-width: $screen-tablet) {
+    display: none;
+  }
+}
+
+.second-size {
+  display: none;
+}
