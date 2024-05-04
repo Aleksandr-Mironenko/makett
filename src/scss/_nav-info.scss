@@ -1,0 +1,231 @@
+@import './_variable.scss';
+
+.nav-info {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  max-width: 1121px;
+  font-family: $family-normal;
+  margin: 0 auto;
+
+  @media (min-width: $screen-monitor) {
+    background-color: $color-body-container;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $screen-full) {
+    margin: 0 0 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: $color-body-container;
+    @media (min-width: $screen-monitor) {
+      justify-content: space-between;
+    }
+  }
+  &__title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    margin: 24px 0;
+
+    @media (min-width: $screen-monitor) {
+      display: flex;
+    }
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text {
+    font-size: 28px;
+    line-height: 40px;
+    margin-left: 16px;
+    letter-spacing: -0.6px;
+    font-family: $family-bold;
+
+    @media (min-width: $screen-tablet) {
+      margin-left: 24px;
+    }
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 4px;
+      height: 100%;
+      border: 1px solid $color-pseudo-element;
+      border-radius: 0 4px 4px 0;
+      background-color: $color-pseudo-element;
+    }
+  }
+
+  &__right {
+    display: none;
+    @media (min-width: $screen-full) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__submit {
+    @media (min-width: $screen-tablet) {
+      margin-right: 8px;
+    }
+  }
+  &__request {
+    display: inline-flex;
+  }
+  &__status {
+    @media (min-width: $screen-monitor) {
+      margin-right: 8px;
+    }
+  }
+  &__checkstatus {
+    display: inline-flex;
+  }
+  &__navigation {
+    max-height: 130px;
+  }
+  &__navigation-menu {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    white-space: nowrap;
+    overflow-x: auto;
+    list-style-type: none;
+
+    @media (min-width: $screen-tablet) {
+      margin-left: 24px;
+    }
+
+    @media (min-width: $screen-monitor) {
+      flex-wrap: wrap;
+      overflow: unset;
+      row-gap: 2px;
+    }
+  }
+  &__navigation-item {
+    display: block;
+    text-wrap: nowrap;
+    padding: 6px 17px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:focus {
+      border: 2px solid $color-pseudo-element;
+      border-radius: 6px;
+      background-color: $color-white;
+    }
+  }
+  &__information {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 16px 0;
+    width: 100%;
+    @media (min-width: $screen-tablet) {
+      flex-direction: row;
+      padding: 0 24px;
+      margin: 24px 0;
+    }
+  }
+  &__information-text {
+    width: 100%;
+    @media (min-width: $screen-tablet) {
+      width: 50%;
+      margin-right: 54px;
+    }
+
+    @media (min-width: $screen-monitor) {
+      align-self: flex-start;
+      margin-top: 8px;
+    }
+  }
+  &__text-field {
+    margin: 0 auto;
+    line-height: 18px;
+    font-size: 16px;
+    padding: 0 16px;
+    letter-spacing: 0.2px;
+    overflow: hidden;
+    margin: auto 0;
+    font-size: 14px;
+
+    @media (min-width: $screen-tablet) {
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &__image-block {
+    @media (min-width: $screen-tablet) {
+      width: 50%;
+    }
+  }
+  &__image {
+    @media (min-width: $screen-tablet) {
+      width: 100%;
+    }
+  }
+  &__movie-more {
+    align-self: flex-start;
+
+    display: flex;
+    position: relative;
+    font-family: $family-middle;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    border: 0;
+    border-radius: 0;
+    background: $color-body-container;
+    padding: 8px 16px;
+
+    @media (min-width: $screen-tablet) {
+      padding: 8px 0 8px 0;
+    }
+    &:hover {
+      transform: translateX(5px);
+      text-shadow: 0 1px $color-black;
+      transition-duration: 0.5s;
+    }
+  }
+  &__more-arrow {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+  }
+  &__all-text {
+    display: inline-block;
+  }
+  &__image {
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $screen-tablet) {
+      width: 100%;
+      margin: 0;
+    }
+    @media (min-width: $screen-monitor) {
+    }
+  }
+}
+
+.open-image {
+  background-image: url('../img/movie-more/down.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.closed-image {
+  background-image: url('../img/movie-more/up.png');
+  background-repeat: no-repeat;
+}

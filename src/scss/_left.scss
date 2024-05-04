@@ -1,0 +1,295 @@
+@import './_variable.scss';
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 200;
+  width: 320px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -0;
+  font-family: $family-middle;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  line-height: 24px;
+  background-color: $color-white;
+  opacity: 1;
+  transition-duration: 1s;
+  transition-property: opacity;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 0.5;
+  }
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+  }
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+  }
+  &__header-first {
+    display: flex;
+    align-items: center;
+  }
+  &__header-burger {
+    display: inline-flex;
+    background-color: $color-white;
+    border: none;
+    margin-left: 16px;
+
+    @media (min-width: $screen-full) {
+      display: none;
+    }
+  }
+  &__header-logo {
+    display: inline-flex;
+    padding: 0 16px;
+  }
+  &__header-second {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__header-checkstatus {
+    display: inline-flex;
+  }
+  &__main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 16px;
+    height: 100%;
+  }
+  &__menu-item {
+    list-style: none;
+    position: relative;
+  }
+
+  &__item-link {
+    display: inline-block;
+    transition-duration: 0.5s;
+    &:hover {
+      opacity: 0.5;
+    }
+    &:focus {
+      color: $color-hard-gray;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: -16px;
+        content: '';
+        width: 4px;
+        height: 100%;
+        border: 1px solid $color-pseudo-element;
+        border-radius: 0 4px 4px 0;
+        background-color: $color-pseudo-element;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0.09;
+    padding-left: 16px;
+  }
+  &__footer-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0.6;
+  }
+  &__call {
+    display: inline-flex;
+    border: none;
+    background-color: $color-white;
+  }
+  &__chat {
+    display: inline-flex;
+    border: none;
+    background-color: $color-white;
+  }
+  &__profile {
+    display: inline-flex;
+    border: none;
+    background-color: $color-white;
+  }
+  &__footer-contacts-number {
+    font-family: $family-bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+  }
+  &__footer-language {
+    display: inline-block;
+    margin: 16px 0;
+    display: block;
+  }
+  &__footer-lang-item {
+    margin-right: 7px;
+    border: none;
+    background-color: $color-white;
+    text-shadow: none;
+    &:focus {
+      color: $color-hard-gray;
+    }
+  }
+}
+
+// .left {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   z-index: 200;
+//   width: 320px;
+//   height: 100vh;
+//   position: absolute;
+//   top: 0;
+//   left: -0;
+//   font-family: "TT Lakes medium", serif, "Times New Roman", Times, serif;
+//   font-size: 16px;
+//   letter-spacing: -0.2px;
+//   line-height: 24px;
+//   background-color: #ffffff;
+//   opacity: 1;
+//   transition-duration: 1s;
+//   transition-property: opacity;
+// }
+.left-hidden {
+  display: none;
+  opacity: 0;
+
+  @media (min-width: $screen-full) {
+    display: flex;
+    opacity: 1;
+  }
+}
+// .left__header {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   flex-grow: 0.5;
+// }
+// .left__header-container {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 18px 0;
+// }
+// .left__header-first {
+//   display: flex;
+//   align-items: center;
+// }
+// .left__header-burger {
+//   display: inline-flex;
+//   background-color: #ffffff;
+//   border: none;
+//   margin-left: 16px;
+
+//   @media (min-width: 1440px) {
+//     display: none;
+//   }
+// }
+// .left__header-logo {
+//   display: inline-flex;
+//   padding: 0 16px;
+// }
+// .left__header-second {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+// .left__header-checkstatus {
+//   display: inline-flex;
+// }
+
+// .left__main-menu {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-evenly;
+//   padding-left: 16px;
+//   height: 100%;
+// }
+// .left__menu-item {
+//   list-style: none;
+//   position: relative;
+// }
+// .left__menu-item a:hover {
+//   opacity: 0.5;
+// }
+// .left__item-link {
+//   display: inline-block;
+//   transition-duration: 0.5s;
+// }
+// .left__item-link:focus {
+//   color: #7e7e82;
+// }
+// .left__item-link:focus::before {
+//   position: absolute;
+//   top: 0;
+//   left: -16px;
+//   content: "";
+//   width: 4px;
+//   height: 100%;
+//   border: 1px solid #41f6d7;
+//   border-radius: 0 4px 4px 0;
+//   background-color: #41f6d7;
+// }
+
+// .left__footer {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   flex-grow: 0.09;
+//   padding-left: 16px;
+// }
+// .left__footer-contacts {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   flex-grow: 0.6;
+// }
+
+// .left__call {
+//   display: inline-flex;
+//   border: none;
+//   background-color: #fff;
+// }
+// .left__chat {
+//   display: inline-flex;
+//   border: none;
+//   background-color: #fff;
+// }
+
+// .left__profile {
+//   display: inline-flex;
+//   border: none;
+//   background-color: #fff;
+// }
+
+// .left__footer-contacts-number {
+//   font-family: "TT Lakes black", serif, "Times New Roman", Times, serif;
+//   font-size: 24px;
+//   line-height: 32px;
+//   letter-spacing: -0.6px;
+// }
+// .left__footer-language {
+//   display: inline-block;
+//   margin: 16px 0;
+//   display: block;
+// }
+// .left__footer-lang-item {
+//   margin-right: 7px;
+//   border: none;
+//   background-color: #ffffff;
+//   text-shadow: none;
+// }
+// .left__footer-lang-item:focus {
+//   color: #7e7e82;
+// }
